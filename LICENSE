@@ -19,16 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
--------------------------------------------------------------------------------
-
-SCOPE
-
-The MIT license above covers this repository's original work: the refresh
-scripts, the skill structure and routing, and the authored organization and
-prose of the reference files.
-
-It does NOT cover third-party material included here. Material Design
-guideline content, AndroidX token values, and the reference images all remain
-under their own licenses and copyright. See NOTICE.md for the full breakdown
-and required attributions.

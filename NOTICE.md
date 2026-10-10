@@ -13,6 +13,10 @@ Covered by [LICENSE](LICENSE), © 2026 abhixv:
 - The selection, organization, and prose of the files in `skills/m3-expressive/references/`
 - `README.md` and this file
 
+The MIT license does **not** cover third-party material included here. Material Design guideline
+content, AndroidX token values, and the reference images all remain under their own licenses and
+copyright, recorded in the sections below.
+
 ## Material Design guidelines (© Google LLC)
 
 The design guidance, placement rules, component behavior, and do/don'ts in

@@ -11,8 +11,10 @@ Material UI.
 ![Platforms](https://img.shields.io/badge/Compose%20%7C%20Views%20%7C%20Flutter%20%7C%20Web-informational)
 ![License](https://img.shields.io/badge/license-MIT%20%2B%20notices-green)
 
+![Without the skill a model answers with plausible wrong values; with it, the exact M3 tokens](docs/social-preview.png)
+
 ```bash
-claude plugin marketplace add abhixv/google-m3-expressive-design-skill
+claude plugin marketplace add abhixv/m3-expressive-design-skill
 claude plugin install m3-expressive@m3-expressive
 ```
 
@@ -34,7 +36,8 @@ doesn't publish gets labelled as a design decision instead of quietly passed off
 
 | You ask | Unassisted | With this skill |
 |---|---|---|
-| "Expressive fast spatial spring?" | a confident spring that isn't in any token file | **damping 0.6, stiffness 800** |
+| "Standard scheme default spatial spring?" | damping 0.8, stiffness 380 (those are the *expressive* values) | **damping 0.9, stiffness 700** |
+| "What does elevation level 3 resolve to?" | 12dp | **6dp** |
 | "Radius for a child inside a 48dp card with 16dp padding?" | "48dp, keep it consistent" | **32dp**, since `inner = outer − padding` |
 | "Gap between the two action buttons?" | a number, stated as spec | *"My design decision (not in M3): 12dp"* |
 | "Fade the color with a bouncy spring?" | sure | color and opacity take **effects** springs: damping 1.0, no overshoot |
@@ -43,6 +46,18 @@ doesn't publish gets labelled as a design decision instead of quietly passed off
 The last two matter as much as the first three. Most Material mistakes aren't missing knowledge,
 they're **plausible defaults applied to the wrong component**, and those are what the do/don't rules
 in each reference catch.
+
+**Measured.** 14 questions whose answers are exact values from the references, asked through
+`claude -p` with no tools and no skill, then again with this plugin loaded. Run on 11 October 2026:
+
+| Model | Without the skill | With the skill |
+|---|---|---|
+| Claude Sonnet | 11/14, and 2 of the 3 misses were confidently wrong numbers | **14/14** |
+| Claude Haiku | 10/14, all 4 misses answered "unknown" | **14/14** |
+
+The first two rows of the table above are the two wrong answers Sonnet gave. Strong models already
+know a lot of M3 from memory; the skill's job is the remaining values, and the ones they get wrong
+without noticing.
 
 ## What you get
 
@@ -68,7 +83,7 @@ lives in the markdown. See [slim install](#slim-install-text-only).
 **As a plugin.** One command, and `claude plugin marketplace update` keeps it current:
 
 ```bash
-claude plugin marketplace add abhixv/google-m3-expressive-design-skill
+claude plugin marketplace add abhixv/m3-expressive-design-skill
 claude plugin install m3-expressive@m3-expressive
 ```
 
@@ -82,7 +97,7 @@ claude plugin uninstall m3-expressive
 `~/.claude/skills/` that contains a `SKILL.md`:
 
 ```bash
-git clone https://github.com/abhixv/google-m3-expressive-design-skill.git ~/m3-skill
+git clone https://github.com/abhixv/m3-expressive-design-skill.git ~/m3-skill
 ln -s ~/m3-skill/skills/m3-expressive ~/.claude/skills/m3-expressive
 ```
 
@@ -90,7 +105,7 @@ ln -s ~/m3-skill/skills/m3-expressive ~/.claude/skills/m3-expressive
 <summary>Windows PowerShell</summary>
 
 ```powershell
-git clone https://github.com/abhixv/google-m3-expressive-design-skill.git "$env:USERPROFILE\m3-skill"
+git clone https://github.com/abhixv/m3-expressive-design-skill.git "$env:USERPROFILE\m3-skill"
 New-Item -ItemType Directory -Force "$env:USERPROFILE\.claude\skills" | Out-Null
 Copy-Item -Recurse -Force `
   "$env:USERPROFILE\m3-skill\skills\m3-expressive" "$env:USERPROFILE\.claude\skills\"
@@ -132,7 +147,7 @@ Codex reads `AGENTS.md`, either the repo's at the project root or a global one a
 `~/.codex/AGENTS.md`. Clone the skill once, then point Codex at it:
 
 ```bash
-git clone https://github.com/abhixv/google-m3-expressive-design-skill.git ~/m3-skill
+git clone https://github.com/abhixv/m3-expressive-design-skill.git ~/m3-skill
 ```
 
 Append the [pointer block](#the-pointer-block) to `~/.codex/AGENTS.md` (global) or your project's

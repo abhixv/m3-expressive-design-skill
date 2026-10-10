@@ -1,7 +1,7 @@
 {
   "name": "m3-expressive",
   "description": "Material Design 3 / M3 Expressive guidelines: exact tokens, per-component specs, motion springs, shape morphing, emphasized typography, color roles, and 2,587 official reference images",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": { "name": "abhixv" },
   "license": "MIT",
   "keywords": ["material-design", "m3", "material-3-expressive", "ui", "design-system", "jetpack-compose", "android"],

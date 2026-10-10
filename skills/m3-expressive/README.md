@@ -18,7 +18,7 @@ m3-expressive/
 ```
 
 **Install instructions, per-agent setup, and everything else:**
-[repository README](../../README.md) · [github.com/abhixv/google-m3-expressive-design-skill](https://github.com/abhixv/google-m3-expressive-design-skill)
+[repository README](../../README.md) · [github.com/abhixv/m3-expressive-design-skill](https://github.com/abhixv/m3-expressive-design-skill)
 
 MIT for the original work; Material Design content and reference images remain © Google LLC under
 their own licenses. See [LICENSE](../../LICENSE) and [NOTICE.md](../../NOTICE.md). Not affiliated

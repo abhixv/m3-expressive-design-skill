@@ -4,14 +4,14 @@
   "owner": { "name": "abhixv" },
   "metadata": {
     "description": "Material Design 3 Expressive design guidelines as a Claude skill",
-    "version": "1.0.0"
+    "version": "1.1.0"
   },
   "plugins": [
     {
       "name": "m3-expressive",
       "source": "./",
       "description": "Material Design 3 / M3 Expressive guidelines, tokens, per-component specs, and reference images",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": { "name": "abhixv" },
       "keywords": ["material-design", "m3", "ui", "design-system", "jetpack-compose"],
       "category": "workflow"
